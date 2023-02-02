@@ -3,33 +3,33 @@
  
 --------------------------
 ### Database design:
-# Fact Table: (the tables that has all the foreign keys of the dimension tables)
+#### Fact Table: (the tables that has all the foreign keys of the dimension tables)
 
-# songplays:
+#### songplays:
 
  - records in log data associated with song plays i.e. records with page NextSong
 - with columns:
 songplay_id as a primary key and type of serial, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
-# Dimension Tables:
+### Dimension Tables:
 
-# 1)users:
+#### 1)users:
 - users in the app
 - With columns:
 user_id as a primary key and type of bigint, first_name, last_name, gender, level
 
 
-# 2)songs: 
+#### 2)songs: 
 - songs in music database
 - With columns:
 song_id as a primary key and type varchar, title, artist_id, year, duration
 
-# 3)artists:
+#### 3)artists:
 - artists in music database
 - With columns:
 artist_id as a primary key and type of varchar, name, location, latitude, longitude
 
-# 4)time:
+#### 4)time:
 - timestamps of records in songplays broken down into specific units
 - With columns:
 start_time as a primary key and type of bigint, hour, day, week, month, year, weekday
